@@ -1,16 +1,26 @@
-import React from 'react'
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar'
-import ItemListContainer from './components/ItemListContainer'
-import {Center} from '@chakra-ui/react';
+import Cart from './components/Cart';
+import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
+
 
 const App = () => {
   return (
-    <>
+    <BrowserRouter>
+
       <Navbar />
-      <Center p='4' bg='blue.200'>
-        <ItemListContainer greeting={"Bienvenido a Valdivieso E-Commerce"}/>
-      </Center>
-    </>
+
+      <Routes>
+        <Route exact path='/' element={<ItemListContainer />} />
+        <Route exact path='/cart' element={<Cart/>} />
+        <Route exact path='/category/:categoriaId' element={<ItemListContainer />} />
+        <Route exact path='/product/:id' element={<ItemDetailContainer />} />
+      </Routes>
+
+    </BrowserRouter>
+
   )
 }
 
