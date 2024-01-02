@@ -10,7 +10,7 @@ const Navbar = () => {
         <Flex>
           <Link to={"/"}>
             <Box p='4' bg='gray.200'>
-              <p>Valdivieso E-Commerce</p>
+              <p>🛍️  Valdivieso E-Commerce</p>
             </Box>
           </Link>  
           <Spacer bg='gray.200'/>

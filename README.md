@@ -1,3 +1,5 @@
+![Gif navegacion](src/gif/ezgif.com-video-to-gif-converter.gif)
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
