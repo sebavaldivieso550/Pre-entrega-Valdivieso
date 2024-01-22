@@ -1,3 +1,5 @@
+[Perfil de Linkdn](https://ar.linkedin.com/in/sebasti%C3%A1n-valdivieso?trk=people-guest_people_search-card)
+
 ![Gif navegacion](src/gif/ezgif.com-video-to-gif-converter.gif)
 
 # React + Vite

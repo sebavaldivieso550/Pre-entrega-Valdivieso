@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Flex, Button, Text, Spacer } from '@chakra-ui/react'
+import { Flex, Button, Spacer } from '@chakra-ui/react'
+import Swal from 'sweetalert2'
 
 
 const ItemCount = () => {
@@ -15,8 +16,10 @@ const ItemCount = () => {
   }
 
   const mostrarMensaje = () => {
-    
+    Swal.fire(`Agregado al carrito ${contador} unidades.`)
   }
+
+  
   return (
     <div>
       <Flex>
@@ -24,13 +27,15 @@ const ItemCount = () => {
           -
         </Button>
         <Spacer/>
-        <Button>Agregar al Carrito</Button>
+        <Button onClick={mostrarMensaje}>
+          Agregar al Carrito {contador}
+        </Button>
+        <Spacer/>
         <Spacer/>
         <Button colorScheme='teal' size='xs' onClick={aumentarContador}>
           +
         </Button>
         <Spacer/>
-        <Text>{contador}</Text>
       </Flex>
     </div>
   )

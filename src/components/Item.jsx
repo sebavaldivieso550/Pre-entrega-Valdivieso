@@ -1,18 +1,29 @@
-import React from 'react'
+import {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import { Flex, Card, CardBody, Image, Stack, Heading, Divider, CardFooter, ButtonGroup, Button } from '@chakra-ui/react'
 import { useParams } from 'react-router-dom'
+import Loader from './Loader'
+
 
 const Item = ({ titulo, id, image }) => {
+
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+      setTimeout(() => {
+          setLoading(false)
+      }, 2000)
+  }, [])
+
   return (
     <Flex>
       <Card maxW='sm'>
         <CardBody>
-          <Image
+          {loading ? <Loader/> : <Image
             src= {image}
             alt=''
             borderRadius='lg'
-          />
+          />}
           <Stack mt='6' spacing='3'>
             <Heading size='md'>{titulo}</Heading>
           </Stack>
