@@ -1,25 +1,9 @@
-import React, { useState } from 'react'
-import { Flex, Button, Spacer } from '@chakra-ui/react'
-import Swal from 'sweetalert2'
+import React from 'react';
+import { Flex, Button, Spacer } from '@chakra-ui/react';
 
 
-const ItemCount = () => {
+const ItemCount = ({cantidad, disminuirContador, aumentarContador, handleAgregar}) => {
 
-  const [contador, setContador] = useState(0)
-
-  const aumentarContador = () => {
-    setContador(contador + 1)
-  }
-  const disminuirContador = () => {
-    if(contador > 0) {
-      setContador(contador - 1)}
-  }
-
-  const mostrarMensaje = () => {
-    Swal.fire(`Agregado al carrito ${contador} unidades.`)
-  }
-
-  
   return (
     <div>
       <Flex>
@@ -27,8 +11,8 @@ const ItemCount = () => {
           -
         </Button>
         <Spacer/>
-        <Button onClick={mostrarMensaje}>
-          Agregar al Carrito {contador}
+        <Button onClick={handleAgregar}>
+          Agregar al Carrito {cantidad}
         </Button>
         <Spacer/>
         <Spacer/>

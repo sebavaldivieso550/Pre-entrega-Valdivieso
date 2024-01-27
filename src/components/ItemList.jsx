@@ -1,28 +1,23 @@
 import React from 'react'
 import Item from './Item'
-import { Flex } from '@chakra-ui/react'
+import { Flex, Box } from '@chakra-ui/react'
 
 
 const ItemList = ({ productos }) => {
 
   return (
     <div>
-      {
-        productos.map((p) => (
-          <Flex>
+      <Box w='100%' h='100%' bgGradient='linear(to-l, #241715, #402A2C, #703D57)' >
+        <Flex wrap="wrap">
+          {productos.map((producto) => (
             <Item 
-              key={p.id}
-              image={p.image}
-              titulo={p.titulo}
-              descripcion={p.descripcion}
-              precio={p.precio}
-              id={p.id}
+              producto = {producto}
             />
-          </Flex>
-        ))
-      }
+          ))}
+        </Flex>
+      </Box>
     </div>
   )
 }
 
-export default React.memo(ItemList)
+export default (ItemList)

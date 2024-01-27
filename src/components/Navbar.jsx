@@ -7,32 +7,32 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
   return (
     <>
-        <Flex>
+        <Flex  bgGradient='linear(to-b, #243E36, #C0B7B1)'>
           <Link to={"/"}>
-            <Box p='4' bg='gray.200'>
+            <Box p='4' className='brand'>
               <p>🛍️  Valdivieso E-Commerce</p>
             </Box>
           </Link>  
-          <Spacer bg='gray.200'/>
+          <Spacer />
           <Menu>
-            <MenuButton bg='gray.200'>
+            <MenuButton >
               Categorias
             </MenuButton>
             <MenuList>
-              <Link to={'category/A'}>
-                <MenuItem>Categoria A</MenuItem>
+              <Link to={'category/Hardware'}>
+                <MenuItem>HARDWARE</MenuItem>
               </Link>
-              <Link to={'category/B'}>
-                <MenuItem>Categoria B</MenuItem>
+              <Link to={'category/Componentes'}>
+                <MenuItem>COMPONENTES</MenuItem>
               </Link>
-              <Link to={'category/C'}>
-                <MenuItem>Categoria C</MenuItem>
+              <Link to={'category/Perifericos'}>
+                <MenuItem>PERIFERICOS</MenuItem>
               </Link>
             </MenuList>
           </Menu>
-          <Spacer bg='gray.200'/>
+          <Spacer />
           <Link to={"/cart"}>
-            <Box p='4' bg='gray.200'>
+            <Box p='4' >
               <CartWidget />
             </Box>
           </Link>
