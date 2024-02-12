@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom'
-import { Flex, Card, CardBody, Image, Stack, Heading, Divider, CardFooter, ButtonGroup, Button, Center } from '@chakra-ui/react'
+import { Flex, Card, CardBody, Image, Stack, Heading, Divider, CardFooter, ButtonGroup, Button } from '@chakra-ui/react'
 import Loader from './Loader'
 
 

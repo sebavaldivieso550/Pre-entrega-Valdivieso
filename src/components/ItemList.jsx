@@ -10,7 +10,7 @@ const ItemList = ({ productos }) => {
       <Box w='100%' h='100%' bgGradient='linear(to-l, #241715, #402A2C, #703D57)' >
         <Flex wrap="wrap">
           {productos.map((producto) => (
-            <Item 
+            <Item key={producto.id}
               producto = {producto}
             />
           ))}

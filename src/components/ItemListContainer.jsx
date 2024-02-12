@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { collection, getDocs, getFirestore } from 'firebase/firestore';
-import ItemList from './ItemList'
-import { useParams } from 'react-router-dom'
+import { collection, getDocs } from 'firebase/firestore';
+import ItemList from './ItemList';
+import { useParams } from 'react-router-dom';
+import { db } from '../firebase/config';
 
 
 const ItemListContainer = () => {
@@ -11,7 +12,6 @@ const ItemListContainer = () => {
   const [products, setProducts] = useState([])
 
   useEffect(() => {
-      const db = getFirestore()
       
       const itemsCollection = collection(db, "Componentes")
       

@@ -1,34 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
-import { doc, getDoc, getFirestore } from 'firebase/firestore';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../firebase/config';
 
 
 const ItemDetailContainer = () => {
 
-  const [product, setProduct] = useState([])
-  const { id } = useParams()
+  const [product, setProduct] = useState([]);
+  const id  = useParams().id;
   
   
     useEffect(() => {
 
-      const db = getFirestore()
-      const oneItem = doc(db, `Componentes`, `${id}`)
-      getDoc(oneItem).then((snapshot) => {
+      const docRef = doc(db, `Componentes`, id)
+      getDoc(docRef).then((snapshot) => {
 
         if(snapshot.exists()) {
-          const doc = snapshot.data()
-          setProduct(doc)
+          setProduct(
+            { ...snapshot.data(), id: snapshot.id }
+          );
         }
       })
-    }, [])
-
-
+    }, [id])
 console.log(product)
+
   return (
     <div>
       {
-        <ItemDetail product = {product} />
+        product && <ItemDetail product = {product} />
       }
     </div>
   )

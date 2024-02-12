@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react';
-import {Box, Text, Card, CardBody, Image, Stack, Heading, Divider, CardFooter, ButtonGroup, Flex } from '@chakra-ui/react';
+import { Text, Card, CardBody, Image, Stack, Heading, Divider, CardFooter, ButtonGroup, Flex } from '@chakra-ui/react';
 import ItemCount from './ItemCount';
 import Loader from './Loader';
 import {CartContext} from '../context/cartContext';
@@ -16,15 +16,15 @@ const ItemDetail = ({ product }) => {
   }, [])
 
   const { cart, addToCart } = useContext(CartContext);
+  console.log(cart)
 
   const [cantidad, setCantidad] = useState(1)
 
-  const aumentarContador = () => {
-    setCantidad(cantidad + 1)
+  const handleAumentar = () => {
+    setCantidad(cantidad + 1);
   }
-  const disminuirContador = () => {
-    if(cantidad > 1) {
-      setCantidad(cantidad - 1)}
+  const handleDisminuir = () => {
+    cantidad > 1 && setCantidad(cantidad - 1);
   }
 
   return (
@@ -52,8 +52,8 @@ const ItemDetail = ({ product }) => {
         <ButtonGroup spacing='2'>
           <ItemCount
             cantidad={cantidad}
-            aumentarContador={aumentarContador}
-            disminuirContador={disminuirContador}
+            handleAumentar={handleAumentar}
+            handleDisminuir={handleDisminuir}
             handleAgregar={() => { addToCart(product, cantidad)}}
           />
         </ButtonGroup>

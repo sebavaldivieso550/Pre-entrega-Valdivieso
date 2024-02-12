@@ -4,8 +4,8 @@ import Navbar from './components/Navbar'
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';
-import Form from './components/Form';
 import { CartProvider } from './context/cartContext';
+import Checkout from './components/Checkout';
 
 const App = () => {
   return (
@@ -20,7 +20,7 @@ const App = () => {
             <Route exact path='/item/:id' element={<ItemDetailContainer />} />
             <Route exact path='/category/:categoryId' element={<ItemListContainer />} />
             <Route exact path='/cart' element={<Cart/>} />
-            <Route exact path='/form' element={<Form/>} />
+            <Route exact path='/checkout' element={<Checkout/>} />
           </Routes>
         
         </BrowserRouter>

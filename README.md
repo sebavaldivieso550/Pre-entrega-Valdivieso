@@ -1,12 +1,14 @@
-[Perfil de Linkdn](https://ar.linkedin.com/in/sebasti%C3%A1n-valdivieso?trk=people-guest_people_search-card)
+# VALDIVIESO E-Commerce 
 
-![Gif navegacion](src/gif/ezgif.com-video-to-gif-converter.gif)
+Sean bienvenidos a VALDIVIESO E-Commerce.
 
-# React + Vite
+Nuestra tienda esta destinada a la venta de tecnologia y componentes electronicos, todo lo necesario para el armado de tu PC y varias cosas más.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Cualquier sugerencia o consulta estamos al tanto de la misma.
 
-Currently, two official plugins are available:
+Esperamos que nuestro e-commerce les sea util y satisfactorio. Les dejamos un GIF con una referencia del mismo. Un saludo, muchas gracias.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Gif navegacion](src/gif/ViteReact-showgif.gif)
+
+Mi perfil de LINKEDIN
+[Perfil de Linkedin](https://ar.linkedin.com/in/sebasti%C3%A1n-valdivieso?trk=people-guest_people_search-card)
